@@ -2,78 +2,168 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinopse - Ping Pong Summer</title>
     <style>
-    a {
-    text-decoration: none;
-    color: darkmagenta;
-    border: none;
-    cursor: pointer;
+    /* ======================================================
+       ESTILOS DO CABEÇALHO (Igualzinho ao Início)
+       ====================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    a:hover {
-    background-color: white;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f5;
+      background-image: radial-gradient(#e2e2df 0.85px, transparent 0.85px);
+      background-size: 18px 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 3px solid #1abc9c;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      background-color: #34495e;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .nav a:hover {
+      background-color: #1abc9c;
+      color: #fff;
+    }
+
+    @media (min-width: 600px) {
+      .nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+      }
+      .nav a {
+        background-color: transparent;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .header {
+        flex-direction: row;
+        justify-space-between;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+      }
+    }
+
+    /* ======================================================
+       ESTILOS DA TABELA DE SINOPSE
+       ====================================================== */
+    .conteudo-principal {
+      padding: 2rem 1rem;
+    }
+
+    a.link-generico {
+      text-decoration: none;
+      color: darkmagenta;
+      border: none;
+      cursor: pointer;
+    }
+
+    a.link-generico:hover {
+      background-color: white;
     }
 
     .titulo {
-    color: darkblue;
-    font-size: 40px;
-    font-weight: bold;
+      color: darkblue;
+      font-size: 40px;
+      font-weight: bold;
     }
 
     table {
-    border: 1px dashed cyan;
-    padding: 5px;
+      border: 1px dashed cyan;
+      padding: 5px;
+      background-color: white;
     }
 
     th {
-    font-family: "Times New Roman", Times, serif;
-    background-color: black;
-    color: white;
-    padding: 12px;
-    line-height: 1.5;
-    text-align: center;
+      font-family: "Times New Roman", Times, serif;
+      background-color: black;
+      color: white;
+      padding: 12px;
+      line-height: 1.5;
+      text-align: center;
     }
 
     tr {
-    border: 1px solid red;
-    font-size: 20px;
+      border: 1px solid red;
+      font-size: 20px;
     }
 
     td {
-    border: 1px solid black;
-    padding: 15px;
-    color: #333; /* Cor corrigida apenas para evitar erro no navegador */
-    text-align: center;
+      border: 1px solid black;
+      padding: 15px;
+      color: #333;
+      text-align: center;
     }
 
     img {
-    width: 120px; /* Largura fixa */
-    height: 180px; /* Altura mantendo a proporção 2:3 */
-    object-fit: cover; /* Ajusta a imagem sem distorcer */
-    border-radius: 6px; /* Bordas levemente arredondadas (opcional) */
+      width: 120px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
     }
 
     ul {
-    text-align: left;
-    display: inline-block;
-    margin: 0;
-    padding-left: 20px;
+      text-align: left;
+      display: inline-block;
+      margin: 0;
+      padding-left: 20px;
     }
     </style>
 </head>
 <body>
-    <center>
-        <header class="header">
+
+  <!-- CABEÇALHO PADRÃO CORRIGIDO -->
+  <header class="header">
     <div class="logo">Meu GOAT site: <b>(Arthur Mota)</b></div>
     <nav class="nav">
-      <a href="https://kiwik03-star.github.io/SEU-LINK-PRINCIPAL/">Início</a>
+      <a href="https://kiwik03-star.github.io/linkAutoBiogr-fia/">Início</a> <!-- Substitua pelo link do seu Início -->
       <a href="https://kiwik03-star.github.io/linkAutoBiogr-fia/">Autobiografia</a>
       <a href="https://kiwik03-star.github.io/linkMySnakeGame/">Joguinho da Cobra</a>
       <a href="https://kiwik03-star.github.io/MinhaTabela_Filmes/">Tabela Filmes</a>
       <a href="#">Sinopse</a>
     </nav>
   </header>
+
+  <div class="conteudo-principal">
+    <center>
         <table style="width:85%">
             <tr>
                 <td colspan="10">
@@ -91,7 +181,6 @@
                 <td colspan="10"><b>Gênero do Filme:</b> Comédia e Drama.</td>
             </tr>
             
-            <!-- Sinopse transformada em parágrafo mantendo a mesma formatação -->
             <tr>
                 <td colspan="10">
                     <p style="text-align: justify; margin: 0;"><b>Sinopse:</b> O filme acompanha uma história de comédia dramática de um garoto tímido de 13 anos chamado Radford "Rad" Miracle que é obcecado e fascinado por duas coisas principais: Ping Pong (Tênis de Mesa) e Hip-Hop. Na trama, Rad e sua família vão passar alguns dias de férias em Ocean City em Maryland nos Estados Unidos, Rad então, faz um novo melhor amigo e com ele experimenta a sua primeira paixão real ao encontrar um lugar cheio de cultura geek e nerds, mas acabo se tornando um alvo por alguns valentões ricos e racistas. Perto de sua casa no vizinho, havia uma mentora inesperada que deu-lhe uma proposta de ajuda para ficar melhor em seu esporte favorito, isso tudo para tentar ganhar em uma partida contra os valentões que atormetavam tanto ele e seu melhor amigo. O filme retrata epóca de 1987 em que trás temas como amizade, amor, susperação e confiança.</p>
@@ -105,7 +194,6 @@
                 <td colspan="10"><b>Proposta e ideia do filme:</b> Retratar a cultura dos anos 80, como superar seu limite (superação), amadurecimento e sua primeira paixão. Tudo isso para retratar a nostalgia da epóca demonstrada no filme Ping Pong Summer.</td>
             </tr>
 
-            <!-- Lista não ordenada adicionada de forma simples -->
             <tr>
                 <td colspan="10">
                     <b>Temas principais da obra:</b><br>
@@ -124,7 +212,6 @@
                 <td colspan="10"><b>Relações com a Minha Displina Pessoal:</b> O filme demosntra exatamente as ideias na Educação Física, ao mostrar exclusão social/bullying que acontece com o Rad e seu melhor amigo no ambiente esportivo e também, a cultura corporal de movimento (esportes alternativos/lazer).</td>
             </tr>
 
-            <!-- Imagem produzida pelo grupo inserida -->
             <tr>
                 <td colspan="10">
                     <b>Foto da Equipe:</b><br><br>
@@ -132,7 +219,6 @@
                 </td>
             </tr>
 
-            <!-- Tabela com os nomes da equipe inserida dentro da estrutura -->
             <tr>
                 <td colspan="10">
                     <b>Integrantes da Equipe:</b><br>
@@ -146,5 +232,7 @@
             </tr>
         </table>
     </center>
+  </div>
+
 </body>
 </html>
