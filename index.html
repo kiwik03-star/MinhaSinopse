@@ -3,181 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinopse - Ping Pong Summer</title>
+    <title>Jogo da Cobrinha - Arthur Mota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f5;
-      background-image: radial-gradient(#e2e2df 0.85px, transparent 0.85px);
-      background-size: 18px 18px;
-      color: #333;
-      line-height: 1.6;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #333333;
+            line-height: 1.6;
+        }
 
-    .header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      border-bottom: 3px solid #1abc9c;
-      width: 100%;
-    }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 3px solid #1abc9c;
+            width: 100%;
+        }
 
-    .logo {
-      font-size: 1.25rem;
-    }
+        .logo {
+            font-size: 1.25rem;
+        }
 
-    .nav {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      gap: 0.5rem;
-    }
+        .nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            gap: 0.5rem;
+        }
 
-    .nav a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 0.8rem;
-      background-color: #34495e;
-      border-radius: 4px;
-      transition: background-color 0.2s;
-    }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.8rem;
+            background-color: #34495e;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
 
-    .nav a:hover {
-      background-color: #1abc9c;
-      color: #fff;
-    }
+        .nav a:hover {
+            background-color: #1abc9c;
+            color: #fff;
+        }
 
-    @media (min-width: 600px) {
-      .nav {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: auto;
-      }
-      .nav a {
-        background-color: transparent;
-      }
-    }
+        @media (min-width: 600px) {
+            .nav {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: auto;
+            }
+            .nav a {
+                background-color: transparent;
+            }
+        }
 
-    @media (min-width: 900px) {
-      .header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 3rem;
-      }
-    }
+        @media (min-width: 900px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem 3rem;
+            }
+        }
 
-    .conteudo-principal {
-      padding: 2rem 1rem;
-    }
+        .conteudo-pagina {
+            padding: 50px 10%;
+            display: flex;
+            justify-content: center;
+        }
 
-    a.link-generico {
-      text-decoration: none;
-      color: darkmagenta;
-      border: none;
-      cursor: pointer;
-    }
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background-color: #111;
+            padding: 30px;
+            border-radius: 10px;
+        }
 
-    a.link-generico:hover {
-      background-color: white;
-    }
+        .titulo {
+            color: #16C99C;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
 
-    .titulo {
-      color: darkblue;
-      font-size: 40px;
-      font-weight: bold;
-    }
+        .fundo-verde-titulo {
+            background-color: #C0FAED;
+            padding: 10px;
+            width: 40%;
+            min-height: 50px;
+            border-radius: 10px;
+            color: #03634D;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
 
-    table {
-      border: 1px dashed cyan;
-      padding: 5px;
-      background-color: white;
-    }
+        .subtitulo {
+            color: #0BD52C;
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
 
-    th {
-      font-family: "Times New Roman", Times, serif;
-      background-color: black;
-      color: white;
-      padding: 12px;
-      line-height: 1.5;
-      text-align: center;
-    }
+        .item {
+            color: #0E641D;
+            font-size: 20px;
+            font-weight: 600;
+        }
 
-    tr {
-      border: 1px solid red;
-      font-size: 20px;
-    }
+        .botao {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #172B04;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            text-align: center;
+        }
 
-    td {
-      border: 1px solid black;
-      padding: 15px;
-      color: #333;
-      text-align: center;
-    }
-
-    img {
-      width: 120px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    ul {
-      text-align: left;
-      display: inline-block;
-      margin: 0;
-      padding-left: 20px;
-    }
+        .botao:hover {
+            background-color: #444444;
+        }
     </style>
 </head>
+
 <body>
 
-  <header class="header">
+<header class="header">
     <div class="logo">Meu GOAT site: <b>(Arthur Mota)</b></div>
     <nav class="nav">
-      <a href="https://kiwik03-star.github.io/SEU-LINK-PRINCIPAL/">Início</a>
+      <a href="https://kiwik03-star.github.io/SitePrincipal/">Início</a>
       <a href="https://kiwik03-star.github.io/linkAutoBiogr-fia/">Autobiografia</a>
-      <a href="https://kiwik03-star.github.io/linkMySnakeGame/">Joguinho da Cobra</a>
+      <a href="#">Joguinho da Cobra</a>
       <a href="https://kiwik03-star.github.io/MinhaTabela_Filmes/">Tabela Filmes</a>
-      <a href="#">Sinopse</a>
+      <a href="https://kiwik03-star.github.io/MinhaSinopse/">Sinopse</a>
     </nav>
-  </header>
+</header>
 
-  <div class="conteudo-principal">
-    <center>
-        <table style="width:85%">
-            <tr>
-                <td colspan="10">
-                    <div class="titulo">Ping Pong Summer - (Desventuras no Verão)</div>
-                    <small>Sinopse</small>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="10"><b>Diretor:</b> Michael Tully.</td>
-            </tr>
-            <tr>
-                <td colspan="10"><b>Ano de Lançamento:</b> Festival de Cinema de Sundance de 2014, em 18 de janeiro de 2014.</td>
-            </tr>
-            <tr>
-                <td colspan="10"><b>Gênero do Filme:</b> Comédia e Drama.</td>
-            </tr>
-            
-            <tr>
-                <td colspan="10">
-                    <p style="text-align: justify; margin: 0;"><b>Sinopse:</b> O filme acompanha uma história de comédia dramática de um garoto tímido de 13 anos chamado Radford "Rad" Miracle que é obcecado e fascinado por duas coisas principais: Ping Pong (Tênis de Mesa) e Hip-Hop. Na trama, Rad e sua família vão passar alguns dias de férias em Ocean City em Maryland nos Estados Unidos, Rad então, faz um novo melhor amigo e com ele experimenta a sua primeira paixão real ao encontrar um lugar cheio de cultura geek e nerds, mas acabo se tornando um alvo por alguns valentões ricos e racistas. Perto de sua casa no vizinho, havia uma mentora inesperada que deu-lhe uma proposta de ajuda para ficar melhor em seu esporte favorito, isso tudo para tentar ganhar em uma partida contra os valentões que atormetavam tanto ele e seu melhor amigo. O filme retrata epóca de 1987 em que trás temas como amizade, amor, susperação e confiança.</p>
-                </td>
-            </tr>
+<div class="conteudo-pagina">
+    <div class="container">
+        <h1 class="titulo">𝓙𝓸𝓰𝓸 𝓭𝓪 𝓒𝓸𝓫𝓻𝓲𝓷𝓱𝓪🐍</h1>
 
-            <tr>
-                <td colspan="10
+        <div class="fundo-verde-titulo">Sobre o jogo:</div>
+
+        <ol style="padding-left: 20px;">
+            <li class="item" style="color: #fff; margin-bottom: 15px;">
+                Serpente (<b>Snake, também conhecido como "jogo da cobrinha"</b>) é um jogo que ficou conhecido por diversas versões cuja versão inicial começou com o jogo Blockade de 1976, sendo feitas várias imitações em vídeo-games e computadores. O jogo foi lançado para celulares Nokia em 1998 e se tornou popular.
+            </li>
+            <li class="item" style="color: #fff; margin-bottom: 15px;">
+                O jogador controla uma longa e fina criatura que se arrasta pela tela, coletando comida, não podendo colidir com seu próprio corpo ou as "paredes" que cercam a área de jogo.
+            </li>
+            <li class="item" style="color: #fff; margin-bottom: 15px;">
+                <em>Algumas versões melhoradas incluem "Corrida do Meerca" e "Corrida do Meerca II", incluído no Neopets.</em>
+            </li>
+        </ol>
+
+        <h2 class="subtitulo" id="tutorial">Passos para Jogar:</h2>
+        <ul style="padding-left: 20px; color: #fff;">
+            <li class="item" style="color: #fff;">Entre no Google</li>
+            <li class="item" style="color: #fff;">Entre no Primeiro Link</li>
+            <li class="item" style="color: #fff;">Clique em Play</li>
+            <li class="item" style="color: #fff;"><mark>Jogue</mark></li>
+        </ul>
+
+        <h2 class="subtitulo">Como Jogar:</h2>
+        <ul style="padding-left: 20px; color: #fff;">
+            <li class="item" style="color: #fff; margin-bottom: 10px;">Quando você começa, terá que coletar maçães para crescer de tamanho.</li>
+            <li class="item" style="color: #fff; margin-bottom: 10px;">No mobile, deslize o dedo; no PC, use as setinhas ou o "W, A, S, D".</li>
+        </ul>
+
+        <img src="https://preview.redd.it/new-game-snake-18-total-hours-v0-hz8apw8248of1.png?width=640&crop=smart&auto=webp&s=6282f30a285135c6f3e8f972ad6dfb75a7e5f0a3" alt="Snake Game" style="width: 100%; border-radius: 8px; margin-top: 20px;">
+        
+        <p style="margin-top: 15px;"><a href="#tutorial" style="color:#589618;">Voltar para o tutorial</a></p>
+        
+        <p class="item" style="font-size: 20px; margin-top: 20px; color: #fff;">Desenvolvedores:</p>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="item" style="font-size: 16px; color: #ffffff;">Arthur M.</li>
+            <li class="item" style="font-size: 16px; color: #ffffff;">Gabriel G.</li>
+        </ul>
+        
+        <a href="https://snakegame.gg/pt/" class="botao" target="_blank">
+            Acessar O Jogo da Cobrinha
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
